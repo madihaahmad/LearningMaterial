@@ -1,0 +1,19 @@
+/***    <ul id = "output"></ul>  ***/
+
+
+
+var list = document.getElementById('output');
+list.innerHTML = '';
+var names = ['saRAh', 'micHEaL', 'mArIa', 'kATe'];
+
+for(var name of names) {
+  console.log(name);
+  name = name.toLowerCase();
+  // write your code just below here
+  let firstLetter = name[0].toUpperCase();
+
+  var result = firstLetter  + name.substring(1);
+  var listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
+}
